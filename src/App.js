@@ -1,7 +1,7 @@
 import "./App.css";
 import AppExtensionsSDK from "@pipedrive/app-extensions-sdk";
 
-const sdk = await new AppExtensionsSDK({ identifier: "123abc" }).initialize({
+const sdk = await new AppExtensionsSDK().initialize({
   size: { height: 500 },
 });
 
