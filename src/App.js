@@ -1,11 +1,19 @@
+import { useEffect } from "react";
 import "./App.css";
 import AppExtensionsSDK from "@pipedrive/app-extensions-sdk";
 
-const sdk = await new AppExtensionsSDK().initialize({
-  size: { height: 500 },
-});
-
 function App() {
+  useEffect(() => {
+    const init = async () => {
+      await new AppExtensionsSDK({
+        identifier: "7c9c58b7-97a6-49d7-81e7-98fb8e0a9e25",
+      }).initialize({
+        size: { height: 500 },
+      });
+    };
+    init();
+  }, []);
+
   return (
     <label>
       field
