@@ -22,10 +22,12 @@ function App() {
   }, []);
 
   return (
-    <label>
-      field
-      <input type="text" style={{ width: "300px", height: "50px" }} />
-    </label>
+    <form>
+      <label>
+        field
+        <input type="text" style={{ width: "300px", height: "50px" }} />
+      </label>
+    </form>
   );
 }
 
