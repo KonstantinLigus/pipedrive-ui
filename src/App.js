@@ -8,9 +8,7 @@ import AppExtensionsSDK, {
 function App() {
   useEffect(() => {
     const init = async () => {
-      const sdk = await new AppExtensionsSDK({
-        identifier: "62a33a39-4b48-460f-af2f-fd47707718ef",
-      }).initialize({
+      const sdk = await new AppExtensionsSDK().initialize({
         size: { height: 500 },
       });
       await sdk.execute(Command.OPEN_MODAL, {
