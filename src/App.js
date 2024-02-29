@@ -1,14 +1,21 @@
 import { useEffect } from "react";
 import "./App.css";
-import AppExtensionsSDK from "@pipedrive/app-extensions-sdk";
+import AppExtensionsSDK, {
+  Command,
+  Modal,
+} from "@pipedrive/app-extensions-sdk";
 
 function App() {
   useEffect(() => {
     const init = async () => {
-      await new AppExtensionsSDK({
+      const sdk = await new AppExtensionsSDK({
         identifier: "62a33a39-4b48-460f-af2f-fd47707718ef",
       }).initialize({
         size: { height: 500 },
+      });
+      await sdk.execute(Command.OPEN_MODAL, {
+        type: Modal.JSON_MODAL,
+        action_id: "62a33a39-4b48-460f-af2f-fd47707718ef",
       });
     };
     init();
