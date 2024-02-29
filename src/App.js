@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     const init = async () => {
       await new AppExtensionsSDK({
-        identifier: "7c9c58b7-97a6-49d7-81e7-98fb8e0a9e25",
+        identifier: "62a33a39-4b48-460f-af2f-fd47707718ef",
       }).initialize({
         size: { height: 500 },
       });
