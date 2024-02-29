@@ -21,14 +21,7 @@ function App() {
     init();
   }, []);
 
-  return (
-    <form>
-      <label>
-        field
-        <input type="text" style={{ width: "300px", height: "50px" }} />
-      </label>
-    </form>
-  );
+  return <div>hello</div>;
 }
 
 export default App;
